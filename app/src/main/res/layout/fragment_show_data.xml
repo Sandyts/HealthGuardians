@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbarStyle="insideOverlay"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/showwbg"
+        tools:context=".ShowDataFragment">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="80px"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="80px"
+            android:background="#F7F7F7F7"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.github.mikephil.charting.charts.LineChart>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/heartBG"
+            android:layout_width="950px"
+            android:layout_height="480px"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"
+            app:srcCompat="@drawable/hr_bg" />
+
+        <TextView
+            android:id="@+id/textView_showtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Date"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.623"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/heartBG" />
+
+        <TextView
+            android:id="@+id/textView_heartrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="90dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Data"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="@+id/heartBG"
+            app:layout_constraintTop_toTopOf="@+id/heartBG" />
+
+        <ImageView
+            android:id="@+id/imgspo2_bg"
+            android:layout_width="950px"
+            android:layout_height="480px"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heartBG"
+            app:srcCompat="@drawable/spbg" />
+
+        <TextView
+            android:id="@+id/textView_spo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="85dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="SPO2"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgspo2_bg"
+            app:layout_constraintTop_toTopOf="@+id/imgspo2_bg" />
+
+        <ImageView
+            android:id="@+id/imgsdnn_bg"
+            android:layout_width="420px"
+            android:layout_height="420px"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgspo2_bg"
+            app:srcCompat="@drawable/sdbg" />
+
+        <TextView
+            android:id="@+id/textView_sdnn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="SDNN"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgsdnn_bg"
+            app:layout_constraintStart_toStartOf="@+id/imgsdnn_bg"
+            app:layout_constraintTop_toTopOf="@+id/imgsdnn_bg" />
+
+        <ImageView
+            android:id="@+id/imgres_bg"
+            android:layout_width="420px"
+            android:layout_height="420px"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="45dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgspo2_bg"
+            app:srcCompat="@drawable/resbg" />
+
+        <TextView
+            android:id="@+id/textView_res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="67dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="RES"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgres_bg"
+            app:layout_constraintStart_toStartOf="@+id/imgres_bg"
+            app:layout_constraintTop_toTopOf="@+id/imgres_bg" />
+
+        <TextView
+            android:id="@+id/textView_hrtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="604dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="HeartRateTime"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <ImageView
+            android:id="@+id/img_restart"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/restart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgsdnn_bg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
